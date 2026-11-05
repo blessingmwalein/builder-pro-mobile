@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "378348961223",
+    "project_id": "ownit2buildit",
+    "storage_bucket": "ownit2buildit.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:378348961223:android:19e2c2116e0ba97f4cede2",
+        "android_client_info": {
+          "package_name": "com.ownit2buildit.builder_pro_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuMqVDGa7h_a_TBJ1dxGv0bWBIbG3HDv8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
