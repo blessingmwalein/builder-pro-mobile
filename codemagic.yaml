@@ -1,0 +1,36 @@
+
+workflows:
+  ios-workflow:
+    name: BuilderPro iOS Build
+    max_build_duration: 60
+
+    instance_type: mac_mini_m2
+
+    environment:
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.ownit2buildit.builderProMobile
+
+    scripts:
+      - name: Get Flutter packages
+        script: flutter pub get
+
+      - name: Install CocoaPods dependencies
+        script: |
+          cd ios
+          pod install
+
+      - name: Build iOS IPA
+        script: flutter build ipa --release
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - build/ios/archive/*.xcarchive
+
+    publishing:
+      email:
+        recipients:
+          - blessingmwalein@outlook.com
