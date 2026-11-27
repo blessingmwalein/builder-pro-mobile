@@ -19,6 +19,8 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Record where you are when you clock in or out, if you turn that on.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>ownit2buildit only uses your location while the app is open, to record where you are when you clock in or out, if you turn that on. It never tracks you in the background.</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Record a voice message to send in a chat.</string>
 	<key>NSCameraUsageDescription</key>

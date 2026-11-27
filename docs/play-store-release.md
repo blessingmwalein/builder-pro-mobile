@@ -230,7 +230,13 @@ data (the app has no crash-reporting tool).
   already copes with an older server by hiding or explaining what it cannot do).
 - Watch **Android vitals** (crashes, slow starts) and the **Reviews** page.
 - iOS is separate: it needs a Mac, an Apple developer account (US$99 a year), the APNs key
-  uploaded in Firebase and the Push capability. Nothing here covers it.
+  uploaded in Firebase and the Push capability. Nothing here covers it, except one lesson:
+  Apple rejects an upload (error 90683) when a plugin references a privacy-sensitive API
+  without a purpose string in `ios/Runner/Info.plist`. The location plugin needs
+  `NSLocationAlwaysAndWhenInUseUsageDescription` even though the app only asks for location
+  while it is open; it is now there, worded honestly. A scan of every plugin's iOS code found
+  no other missing strings. If Apple later names `NSFaceIDUsageDescription` (the secure-storage
+  plugin mentions Face ID, but the app does not use it), add a string that says so truthfully.
 
 ## Known risks and loose ends
 
